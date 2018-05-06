@@ -14,7 +14,7 @@ This project contains everything you need to get setup with the latest version o
 
 ```bash
 # Navigate to the folder you want to download the project into and run
-git clone https://github.com/SpellCraft/mdb4-boilerplate.git
+git clone --recursive https://github.com/SpellCraft/mdb4-boilerplate.git
 ```
 
 2.  **Install dependencies**
