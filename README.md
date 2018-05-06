@@ -15,14 +15,18 @@ This project contains everything you need to get setup with the latest version o
 git clone https://github.com/SpellCraft/mdb4-boilerplate.git
 ```
 
-2.  Install dependencies
+2.  **Install dependencies**
 
 ```bash
 # Installs all development and production dependencies
 npm install
 ```
 
-3.  Start developing
+3.  **Pro Users** (Free users; Skip this step)
+    **Step 1:** Navigate to the **/src/vendors/mdb** folder and remove it. Replace it with the _PRO_ package you download from the website or gitlab repository, then rename it to **_mdb_**.
+    **Step 2:** Open **webpack.config.js** and remove the commented out line near the top of the file and in the _Plugins_ section.
+
+4)  **Start developing**
 
 ```bash
 # Start the development server
