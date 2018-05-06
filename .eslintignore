@@ -1,0 +1,3 @@
+# Make Eslint ignore these folders
+dist
+node_modules

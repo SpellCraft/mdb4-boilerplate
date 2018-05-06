@@ -1,0 +1,12 @@
+// FontAwesome 4.7.x
+$fa-font-path: '~font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome.scss';
+
+// Bootstrap 4
+@import '~bootstrap/scss/bootstrap';
+
+// Material Design Bootrstrap v4
+@import '../vendors/mdb/css/mdb.css';
+
+// Your custom styles
+@import 'custom';

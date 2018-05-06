@@ -1,0 +1,62 @@
+{
+  "name": "mdb4-boilerplate",
+  "version": "1.0.0",
+  "description": "A complete Webpack boilerplate for Material Design for Bootstrap",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack-dev-server --mode development --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpellCraft/mdb4-boilerplate.git"
+  },
+  "author": {
+    "name": "Arnt Oddvar Pedersen",
+    "email": "arnt.o.pedersen@gmail.com",
+    "url": "http://www.vext.no/co-workere/"
+  },
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/SpellCraft/mdb4-boilerplate/issues"
+  },
+  "homepage": "https://github.com/SpellCraft/mdb4-boilerplate#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "exports-loader": "^0.7.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.7",
+    "@fortawesome/fontawesome-free-brands": "^5.0.12",
+    "@fortawesome/fontawesome-free-regular": "^5.0.12",
+    "@fortawesome/fontawesome-free-solid": "^5.0.12",
+    "bootstrap": "^4.1.1",
+    "font-awesome": "^4.7.0",
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.3.1",
+    "node-waves": "^0.7.6",
+    "popper.js": "^1.14.3"
+  }
+}
