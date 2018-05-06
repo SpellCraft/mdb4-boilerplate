@@ -1,6 +1,8 @@
 # MDB + Webpack Starter Kit
+[![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate)
 
-A Material Design for Bootstrap 4 boilerplate for Webpack 4.
+A Material Design for Bootstrap 4 boilerplate for Webpack 4. 
+
 
 #### Getting Started
 
