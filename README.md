@@ -1,12 +1,10 @@
 # MDB + Webpack Starter Kit
+
 [![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate)
 
-A Material Design for Bootstrap 4 boilerplate for Webpack 4. 
-
+A Material Design for Bootstrap boilerplate for Webpack 4.
 
 #### Getting Started
-
----
 
 This project contains everything you need to get setup with the latest version of MDB. Simply follow the instructions under and you're ready to go in seconds.
 
@@ -24,9 +22,16 @@ git clone --recursive https://github.com/SpellCraft/mdb4-boilerplate.git
 npm install
 ```
 
-3.  **Pro Users** (Free users; Skip this step)
-    **Step 1:** Navigate to the **/src/vendors/mdb** folder and remove it. Replace it with the _PRO_ package you download from the website or gitlab repository, then rename it to **_mdb_**.
-    **Step 2:** Open **webpack.config.js** and remove the commented out line near the top of the file and in the _Plugins_ section.
+3.  **Pro Users**
+    **Step 1:** Overwrite the contents of the **mdb** folder in **/src/vendors/** with the contents of your Pro package.
+    **Step 2:** Open **webpack.config.js** and uncomment the following:
+    ```javascript
+    // const CopyWebpackPlugin = require('copy-webpack-plugin');
+    ```
+    and
+    ```javascript
+    // new CopyWebpackPlugin([{ from: 'src/vendors/mdb/mdb-addons', to: 'mdb-addons' }]),
+    ```
 
 4)  **Start developing**
 
@@ -34,32 +39,34 @@ npm install
 # Start the development server
 # http://localhost:8080 - loads automatically
 npm run dev
-OR
+
 # Build a production version of the project
 npm run build
 ```
 
----
+&nbsp;
 
-#### Technologies used
+#### Project workflow
 
-Modules used within the project to give it that complete boilerplate feel.
-
-For development and completeness sake
+ES6 ready environment
+**Tools**
 
 * Babel
 * Webpack 4
-* Eslint + Airbnb preset
+* Eslint
+* Airbnb style guide
 
-To make Material Design for Bootstrap work properly
+**Libraries**
 
-* jQuery 3.3.1
-* Popper.JS 1.14
+* jQuery
+* Popper.js
 * Bootstrap 4
-* Node-Waves v0.7.6
-* Fontawesome 4.7
-* Material Design for Bootstrap 4
+* FontAwesome 4.7
+* FontAwesome 5
+* Material Design for Bootstrap
 
-Extras
+---
 
-* Fontawesome 5
+## Special Thanks
+
+The developers of [MDBootstrap.com](https://mdbootstrap.com)
