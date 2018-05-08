@@ -58,7 +58,7 @@ module.exports = {
       {
         test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         exclude: [/node_modules/, /img/],
-        loader: 'file-loader?name=font/[name].[ext]',
+        loader: 'file-loader?name=font/roboto/[name].[ext]',
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
