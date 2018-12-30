@@ -1,95 +1,122 @@
 const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const extractPlugin = new ExtractTextPlugin({
-  filename: 'main.css',
-});
+module.exports = (env, argv) => {
+  // console.log(env, argv);
 
-module.exports = {
-  entry: [
-    'babel-polyfill',
-    './src/js/app.js',
-    './src/scss/main.scss',
-    './src/vendors/mdb/scss/mdb.scss',
-  ],
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-  },
-  module: {
-    rules: [
-      {
-        enforce: 'pre',
-        test: /\.js?$/,
-        exclude: [/node_modules/, /vendors/],
-        loader: 'eslint-loader',
-        options: {
-          fix: true,
+  return {
+    entry: ['./src/js/app.js', './src/scss/main.scss'],
+    output: {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'js/bundle.js',
+    },
+    mode: argv.mode,
+    module: {
+      rules: [
+        {
+          enforce: 'pre',
+          test: /\.js$/,
+          exclude: /(node_modules|bower_components|vendors)/,
+          loader: 'eslint-loader',
+          options: {
+            fix: true,
+          },
         },
+        {
+          test: /\.js$/,
+          exclude: /(node_modules|bower_components|vendors)/,
+          loader: 'babel-loader',
+          options: {
+            cacheDirectory: true,
+          },
+        },
+        {
+          test: /\.html$/,
+          loader: 'html-loader',
+          options: {
+            minimize: true,
+            removeComments: true,
+            collapseWhitespace: true,
+          },
+        },
+        {
+          test: /\.(sa|sc)ss$/,
+          use: [argv.mode !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        },
+        {
+          test: /\.(jpe?g|png|gif)$/,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/',
+          },
+        },
+        {
+          test: /\.(eot|svg|ttf|woff2?|otf)$/,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/',
+          },
+        },
+      ],
+    },
+    plugins: [
+      new HtmlWebPackPlugin({
+        template: './src/index.html',
+        filename: 'index.html',
+      }),
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.$': 'jquery',
+        'window.jQuery': 'jquery',
+        Waves: 'node-waves',
+        _: 'underscore',
+        Promise: 'es6-promise',
+      }),
+      new MiniCssExtractPlugin({
+        filename: argv.mode !== 'production' ? 'css/[name].css' : 'css/[name].[hash].css',
+        chunkFilename: argv.mode !== 'production' ? 'css/[id].css' : 'css/[id].[hash].css',
+        cssProcessorOptions: {
+          safe: true,
+          discardComments: {
+            removeAll: true,
+          },
+        },
+      }),
+      new CopyWebpackPlugin([
+        {
+          from: '**/*',
+          to: 'mdb-addons',
+          context: path.resolve(__dirname, 'src', 'vendors', 'mdb', 'mdb-addons'),
+        },
+      ]),
+      new CleanWebpackPlugin('dist', { verbose: true }),
+    ],
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
       },
-      {
-        test: /\.js?$/,
-        exclude: [/node_modules/, /vendors/],
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['env', 'stage-0'],
+      minimizer: [
+        new TerserPlugin({
+          parallel: true,
+          sourceMap: true,
+          terserOptions: {
+            output: {
+              comments: false,
             },
           },
-        ],
-      },
-      {
-        test: /\.scss?$/,
-        use: extractPlugin.extract({
-          use: ['css-loader', 'sass-loader'],
         }),
-      },
-      {
-        test: /\.html$/,
-        use: ['html-loader'],
-      },
-      // Font-awesome 4.7.X
-      {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        exclude: [/vendors/, /img/],
-        loader: 'file-loader?name=fonts/[name].[ext]',
-      },
-      // MDB
-      {
-        test: /\.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        exclude: [/node_modules/, /img/],
-        loader: 'file-loader?name=font/roboto/[name].[ext]',
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          useRelativePath: true,
-        },
-      },
-    ],
-  },
-  plugins: [
-    extractPlugin,
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.$': 'jquery',
-      'window.jQuery': 'jquery',
-      Waves: 'node-waves',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-    }),
-    // new CopyWebpackPlugin([{ from: 'src/vendors/mdb/mdb-addons', to: 'mdb-addons' }]),
-    new CleanWebpackPlugin(['dist']),
-  ],
-  devtool: 'source-map',
-  target: 'web',
+        new OptimizeCSSAssetsPlugin({}),
+      ],
+    },
+    performance: {
+      hints: false,
+    },
+  };
 };

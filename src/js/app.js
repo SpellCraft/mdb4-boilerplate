@@ -1,17 +1,34 @@
-// jQuery
+/**
+ * This is your JavaScript application's entry-point.
+ *
+ * Webpack will look into this file to find references to
+ * other source files.
+ */
+/**
+ * @module jQuery
+ */
 import 'jquery';
 
-// PopperJS
+/**
+ * @module Popper.js
+ */
 import 'popper.js';
 
-// Bootstrap 4
+/**
+ * @module Bootstrap
+ */
 import 'bootstrap';
 
-// Material Design Bootstrap
+/**
+ * @module FontAwesome5
+ */
+import '@fortawesome/fontawesome-free/js/all';
+
+/**
+ * @module MBD + datatables addon
+ */
 import '../vendors/mdb/js/mdb';
+import '../vendors/mdb/js/addons/datatables';
 
-// Fontawesome 5
-import './fa5';
-
-// Example
+// Load our example file
 import './example';

@@ -1,11 +1,20 @@
 root = true
 
 [*]
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+charset = utf-8
+# editorconfig-tools is unable to ignore longs strings or urls
+
+[*.html]
+max_line_length = 180
+
+[*.js]
+max_line_length = 180
 indent_style = space
 indent_size = 2
-charset = utf-8
-trim_trailing_whitespace = true
-insert_final_newline = true
-end_of_line = lf
-# editorconfig-tools is unable to ignore longs strings or urls
-max_line_length = 100
+
+[{package.json,*.yml,*.cjson}]
+indent_style = space
+indent_size = 2

@@ -1,9 +1,25 @@
-// FontAwesome 4.7.x
-$fa-font-path: '~font-awesome/fonts';
-@import '~font-awesome/scss/font-awesome.scss';
+// Fontawesome 5
+$fa-font-path: '../../node_modules/@fortawesome/fontawesome-free/webfonts' !default;
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+@import '@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
 
 // Bootstrap 4
 @import '~bootstrap/scss/bootstrap';
+
+/**
+ * Override MDB variables.
+ * Tell MDB where to find its fonts and images
+ */
+$image-path: '../vendors/mdb/img' !default;
+$roboto-font-path: '../vendors/mdb/font/roboto/' !default;
+
+// MDB main scss file
+@import '../vendors/mdb/scss/mdb.scss';
+
+// MDB Addons
+@import '../vendors/mdb/scss/addons/datatables';
 
 // Your custom styles
 @import 'custom';

@@ -1,72 +1,71 @@
-# MDB + Webpack Starter Kit
+# A Material Design Bootstrap & Webpack boilerplate
 
 [![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate)
 
-A Material Design for Bootstrap boilerplate for Webpack 4.
+<p style="font-weight:900;font-size:20px;text-align:center;">Special Thanks</p>
+<p style="text-align:center;">
+    <a href="https://mdbootstrap.com" target="_blank">
+        <img src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png" alt="Developers of MDB for jQuery">
+    </a>
+</p>
+<p align="center">Huge thanks to the developers of MDBootstrap for creating such an in-depth and awesome UI-Kit.</p>
+<p align="center">
+    Using the <b>Free</b> version of MDB?<br>
+    Consider upgrading to the <b>Pro</b> version for even more features!<br>
+    <a href="https://mdbootstrap.com/material-design-for-bootstrap/?utm_ref_id=29943" target="_blank">MDBootstrap Upgrade</a>
+</p>
+<br>
+<br>
+<p style="font-weight:900;font-size:22px;text-align:center;">Quickstart Guide</p>
 
-#### Getting Started
-
-This project contains everything you need to get setup with the latest version of MDB. Simply follow the instructions under and you're ready to go in seconds.
-
-1.  Clone the repository
-
+This boilerplate comes complete with everything you need to get a quick start on any project. This boilerplate supports both the **Free** and **Pro** version of MDB for jQuery.
+To begin, simply navigate to where you want to clone this boilerplate then run the following commands:
 ```bash
-# Navigate to the folder you want to download the project into and run
+# Clone the project
 git clone --recursive https://github.com/SpellCraft/mdb4-boilerplate.git
-```
-
-2.  **Install dependencies**
-
-```bash
-# Installs all development and production dependencies
+# Then install dependencies
 npm install
 ```
 
-3.  **Pro Users**
-    **Step 1:** Overwrite the contents of the **mdb** folder in **/src/vendors/** with the contents of your Pro package.
-    **Step 2:** Open **webpack.config.js** and uncomment the following:
-    ```javascript
-    // const CopyWebpackPlugin = require('copy-webpack-plugin');
-    ```
-    and
-    ```javascript
-    // new CopyWebpackPlugin([{ from: 'src/vendors/mdb/mdb-addons', to: 'mdb-addons' }]),
-    ```
 
-4)  **Start developing**
+#### **Note:** ***MDB PRO JQuery users***
+When you're cloning the project, the **free** version of MDB is automatically checked out and placed inside **/src/vedors/mdb**. To use the **Pro** version of MDB for jQuery, simply replace the contents of this folder with the **PRO** package to upgrade from the free version.
+<br>
+<br>
+<br>
+<p style="font-weight:900;font-size:16px;text-align:center;">Development Mode</p>
 
+To start developing your new web-app right away, run this command:
 ```bash
-# Start the development server
-# http://localhost:8080 - loads automatically
-npm run dev
+npm start
+```
+This starts the Webpack development server with Hot Module Replacement enabled and open the project in a new broser window/tab.
+<br>
+<br>
+<br>
+<br>
+<br>
+<p style="font-weight:900;font-size:16px;text-align:center;">Production Mode</p>
 
-# Build a production version of the project
+This boilerplate is also optimized for development use. Unfortunately, I can't cover all use-cases, but the most common tasks will be done automatically:
+
+* Converts SCSS/SASS files to CSS
+* Removal of comments (Special comments preserved)
+* Optimizing filenames & assets
+* Minimizing CSS and JS output files
+* Large js/css files split into chunks for faster loading
+```bash
+# Build folder structure
+/dist/
+  |-/assets/ # All other files
+  |-/css/ # CSS files
+  |-/js/ # JS files
+  index.html
+```
+In addition to this, all files will be placed in a **/dist** folder in the project root. This folder is purged every time the project builds.
+<br><br>
+
+To build your project, use this command:
+```bash
 npm run build
 ```
-
-&nbsp;
-
-#### Project workflow
-
-ES6 ready environment
-**Tools**
-
-* Babel
-* Webpack 4
-* Eslint
-* Airbnb style guide
-
-**Libraries**
-
-* jQuery
-* Popper.js
-* Bootstrap 4
-* FontAwesome 4.7
-* FontAwesome 5
-* Material Design for Bootstrap
-
----
-
-## Special Thanks
-
-The developers of [MDBootstrap.com](https://mdbootstrap.com)
