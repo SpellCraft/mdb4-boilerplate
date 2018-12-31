@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate)
 
-<p align="center" style="font-weight:900;font-size:20px;text-align:center;">Special Thanks</p>
+<h2 align="center"><b>Special Thanks</b></h2>
 <p align="center" style="text-align:center;">
     <a href="https://mdbootstrap.com" target="_blank">
         <img src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png" alt="Developers of MDB for jQuery">
@@ -16,7 +16,7 @@
 </p>
 <br>
 <br>
-<p style="font-weight:900;font-size:22px;text-align:center;">Quickstart Guide</p>
+<h1 align="center"><b>Quickstart Guide</b></h1>
 
 This boilerplate comes complete with everything you need to get a quick start on any project. This boilerplate supports both the **Free** and **Pro** version of MDB for jQuery.
 To begin, simply navigate to where you want to clone this boilerplate then run the following commands:
@@ -33,7 +33,7 @@ When you're cloning the project, the **free** version of MDB is automatically ch
 <br>
 <br>
 <br>
-<p align="center" style="font-weight:900;font-size:16px;text-align:center;">Development Mode</p>
+<h2 align="center"><b>Development Mode</b></h2>
 
 To start developing your new web-app right away, run this command:
 ```bash
@@ -44,8 +44,7 @@ This starts the Webpack development server with Hot Module Replacement enabled a
 <br>
 <br>
 <br>
-<br>
-<p align="center" style="font-weight:900;font-size:16px;text-align:center;">Production Mode</p>
+<h2 align="center"><b>Production Mode</b></h2>
 
 This boilerplate is also optimized for development use. Unfortunately, I can't cover all use-cases, but the most common tasks will be done automatically:
 
