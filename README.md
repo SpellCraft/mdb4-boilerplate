@@ -16,6 +16,9 @@
 </p>
 <br>
 <br>
+<h2 align="center"><b>New version of MDB-Boilerplate coming in March!</b></h2>
+<br>
+<br>
 <h1 align="center"><b>Quickstart Guide</b></h1>
 
 This boilerplate comes complete with everything you need to get a quick start on any project. This boilerplate supports both the **Free** and **Pro** version of MDB for jQuery.
