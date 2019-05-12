@@ -1,3 +1,9 @@
+# NOTICE: A major update of this repository is waiting for the 4.8.1 release of MDB Free & Pro to fix a reference error that break all package compilers. Expect a day-1 update of this repository with the release of version 4.8.1.
+
+<br>
+<br>
+<br>
+
 # A Material Design Bootstrap & Webpack boilerplate
 
 [![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate)
@@ -14,9 +20,6 @@
     Consider upgrading to the <b>Pro</b> version for even more features!<br>
     <a href="https://mdbootstrap.com/material-design-for-bootstrap/?utm_ref_id=29943" target="_blank">MDBootstrap Upgrade</a>
 </p>
-<br>
-<br>
-<h2 align="center"><b>New version of MDB-Boilerplate coming in March!</b></h2>
 <br>
 <br>
 <h1 align="center"><b>Quickstart Guide</b></h1>
