@@ -3,7 +3,9 @@ sudo: false
 node_js:
  - "stable"
 install:
+ - npm uninstall mdbootstrap
  - npm install
+ - npm install mdbootstrap@4.7.7
 script:
  - npm run build
 cache:
