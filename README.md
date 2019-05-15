@@ -1,14 +1,13 @@
-# NOTICE: A major update of this repository is waiting for the 4.8.1 release of MDB Free & Pro to fix a reference error that break all package compilers. Expect a day-1 update of this repository with the release of version 4.8.1.
+[![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate) [![star this repo](http://githubbadges.com/star.svg?user=SpellCraft&repo=mdb-boilerplate&style=flat)](https://github.com/SpellCraft/mdb-boilerplate) [![fork this repo](http://githubbadges.com/fork.svg?user=SpellCraft&repo=mdb-boilerplate&style=flat)](https://github.com/SpellCraft/mdb-boilerplate/fork) [![Badge](https://img.shields.io/github/license/SpellCraft/mdb-boilerplate.svg)](https://img.shields.io/github/license/SpellCraft/mdb-boilerplate.svg)
 
+# Overview
+
+This boilerplate is a set of utilities and plugins for NodeJs to tune and streamline your MDBootstrap experience for greater productivity.
+
+This boilerplate follows the Airbnb-style guide for JavaScript found [here](https://github.com/airbnb/javascript).
 <br>
 <br>
-<br>
 
-# A Material Design Bootstrap & Webpack boilerplate
-
-[![Build Status](https://travis-ci.org/SpellCraft/mdb4-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate)
-
-<h2 align="center"><b>Special Thanks</b></h2>
 <p align="center" style="text-align:center;">
     <a href="https://mdbootstrap.com" target="_blank">
         <img src="https://mdbootstrap.com/img/logo/mdb-transparent-250px.png" alt="Developers of MDB for jQuery">
@@ -20,57 +19,77 @@
     Consider upgrading to the <b>Pro</b> version for even more features!<br>
     <a href="https://mdbootstrap.com/material-design-for-bootstrap/?utm_ref_id=29943" target="_blank">MDBootstrap Upgrade</a>
 </p>
-<br>
-<br>
-<h1 align="center"><b>Quickstart Guide</b></h1>
 
-This boilerplate comes complete with everything you need to get a quick start on any project. This boilerplate supports both the **Free** and **Pro** version of MDB for jQuery.
-To begin, simply navigate to where you want to clone this boilerplate then run the following commands:
+# Current issues
+
+- Versions above 4.7.7 of MDBootstrap does not work with package compilers such as Webpack because of a change in how they load external packages/plugins. Therefor, this boilerplate is locked in on 4.7.7 right now.
+- Security warning concerning node-sass > node-gyp > tar
+  > Versions of node-tar prior to 4.4.2 are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.
+
+You shouldn't worry about ever hitting this vulnerability, however, keep in mind that it exists.
+
+# Installation
+
+First time installation process for both Free and Pro users:
+
 ```bash
-# Clone the project
-git clone --recursive https://github.com/SpellCraft/mdb4-boilerplate.git
-# Then install dependencies
 npm install
 ```
 
+- If you're only using the Free version, you're good to go!
 
-#### **Note:** ***MDB PRO JQuery users***
-When you're cloning the project, the **free** version of MDB is automatically checked out and placed inside **/src/vedors/mdb**. To use the **Pro** version of MDB for jQuery, simply replace the contents of this folder with the **PRO** package to upgrade from the free version.
 <br>
-<br>
-<br>
-<h2 align="center"><b>Development Mode</b></h2>
 
-To start developing your new web-app right away, run this command:
+- For those who use the **Pro** version, you need to send an email to contact@mdbootstrap.com and request access to the GitLab repo if you haven't done so already. Once you have access, [login and go to your settings](https://git.mdbootstrap.com/profile/), then follow the steps in the image below.
+  <br>
+
+  ![img](https://i.imgur.com/vvZwPgk.png)
+  <br>
+
+  Once done, the page will update and at the top, a new field will appear called **Your New Personal Access Token**.
+  ![img2](https://i.imgur.com/AI5JJjp.png)
+
+  Remember this **access token** as you'll never be able to see it again once/if you leave this page.
+  With this **access token**, run the following commands inside the project, remember to replace **_ACCESS_TOKEN_** with your actual token:
+
+  ```bash
+  npm uninstall mdbootstrap
+  npm install git+https://oauth2:ACCESS_TOKEN@git.mdbootstrap.com/mdb/jquery/jq-pro.git#4.7.7 --save
+  ```
+
+  **_Notice_**: _You'll get warned that there are 8 vulnerabilities through NPM, you do not need to worry about these._
+  Finally, you'll need to update the paths in **/src/app.js** and **/src/scss/style.scss** from **_~mdbootstrap_** to **_~mdbootstrap-pro_**. Remember to uncomment and/or add any of the pro addons that you need.
+
+<br>
+##### Start development server
 ```bash
 npm start
 ```
-This starts the Webpack development server with Hot Module Replacement enabled and open the project in a new broser window/tab.
-<br>
-<br>
-<br>
-<br>
-<h2 align="center"><b>Production Mode</b></h2>
-
-This boilerplate is also optimized for development use. Unfortunately, I can't cover all use-cases, but the most common tasks will be done automatically:
-
-* Converts SCSS/SASS files to CSS
-* Removal of comments (Special comments preserved)
-* Optimizing filenames & assets
-* Minimizing CSS and JS output files
-* Large js/css files split into chunks for faster loading
-```bash
-# Build folder structure
-/dist/
-  |-/assets/ # All other files
-  |-/css/ # CSS files
-  |-/js/ # JS files
-  index.html
-```
-In addition to this, all files will be placed in a **/dist** folder in the project root. This folder is purged every time the project builds.
-<br><br>
-
-To build your project, use this command:
+Runs the project with webpack-dev-server, opens in a new tab on your default browser. Live-reload enabled.
+##### Building your project
 ```bash
 npm run build
 ```
+Builds the project to **/dist/**
+
+# Updating
+
+When you want to update the project, it's dependencies and packages, I recommend installing npm-check-updates
+
+```bash
+npm i npm-check-updates -g
+```
+
+Once installed, run the following commands inside the repository:
+
+```bash
+ncu -u
+```
+
+If packages are updated, run:
+
+```bash
+npm install
+```
+
+Otherwise you are good to go. To update the version of MDBootstrap you use, just uninstall **mdbootstrap** through npm and re-install the package. NCU most likely will not update these packages because we currently force version 4.7.7 instead of the latest **HEAD** version.

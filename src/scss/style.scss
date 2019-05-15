@@ -1,0 +1,41 @@
+// Fontawesome 5
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts' !default;
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+@import '~@fortawesome/fontawesome-free/scss/regular.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/v4-shims.scss';
+
+// Bootstrap 4
+@import '~bootstrap/scss/bootstrap.scss';
+
+// MDBootstrap
+$roboto-font-path: '~mdbootstrap/font/roboto/' !default;
+$image-path: '~mdbootstrap/img' !default;
+@import '~mdbootstrap/scss/mdb.scss';
+@import '~mdbootstrap/scss/addons/datatables';
+@import '~mdbootstrap/scss/addons/datatables-select';
+@import '~mdbootstrap/scss/addons/directives';
+// @import '~mdbootstrap/scss/addons/flags';
+// @import '~mdbootstrap/scss/addons/hierarchical-display';
+// @import '~mdbootstrap/scss/addons-pro/cards-extended';
+// @import '~mdbootstrap/scss/addons-pro/chat';
+// @import '~mdbootstrap/scss/addons-pro/multi-range';
+// @import '~mdbootstrap/scss/addons-pro/steppers';
+// @import '~mdbootstrap/scss/addons-pro/timeline';
+
+// iPhone X "notch" fuckery
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+// Fix rounded buttons in MDBootstrap v4.5 and above
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

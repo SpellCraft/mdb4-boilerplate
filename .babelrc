@@ -1,5 +1,18 @@
 {
-  "presets": ["@babel/preset-env"],
+  "presets": [
+    "@babel/preset-env",
+    [
+      "airbnb",
+      {
+        "targets": {
+          "chrome": 50,
+          "ie": 10,
+          "firefox": 45,
+          "edge": 1
+        }
+      }
+    ]
+  ],
   "plugins": [
     "@babel/plugin-proposal-class-properties",
     ["@babel/plugin-proposal-decorators", { "decoratorsBeforeExport": true }],
@@ -17,6 +30,6 @@
     "@babel/plugin-proposal-throw-expressions",
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-syntax-import-meta",
-    "@babel/plugin-transform-arrow-functions",
-  ],
+    "@babel/plugin-transform-arrow-functions"
+  ]
 }

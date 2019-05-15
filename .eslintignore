@@ -1,4 +1,7 @@
-# Make Eslint ignore these folders
-dist
-node_modules
-src/vendors
+# Ignored folders
+/dist/
+/node_modules/
+/src/lib/
+
+# Ignored files
+webpack.config.js

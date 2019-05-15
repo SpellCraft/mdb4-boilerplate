@@ -5,13 +5,11 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 charset = utf-8
-# editorconfig-tools is unable to ignore longs strings or urls
-
-[*.html]
-max_line_length = 180
+end_of_line = lf
 
 [*.js]
-max_line_length = 180
+# editorconfig-tools is unable to ignore longs strings or urls
+max_line_length = 200
 indent_style = space
 indent_size = 2
 

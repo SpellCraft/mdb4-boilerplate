@@ -1,3 +1,0 @@
-[submodule "src/vendors/mdb"]
-	path = src/vendors/mdb
-	url = https://github.com/mdbootstrap/bootstrap-material-design

@@ -4,5 +4,12 @@
   "env": {
     "browser": true,
     "jquery": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "rules": {
+    "max-len": "off"
   }
 }
