@@ -2,9 +2,7 @@
 
 # Overview
 
-This boilerplate is a set of utilities and plugins for NodeJs to tune and streamline your MDBootstrap experience for greater productivity.
-
-This boilerplate follows the Airbnb-style guide for JavaScript found [here](https://github.com/airbnb/javascript).
+This boilerplate is a set of utilities and plugins for NodeJs to tune and streamline your MDBootstrap experience for greater productivity. This boilerplate follows the Airbnb-style guide for JavaScript found [here](https://github.com/airbnb/javascript).
 <br>
 <br>
 
