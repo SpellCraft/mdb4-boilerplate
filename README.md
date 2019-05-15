@@ -61,11 +61,13 @@ npm install
   Finally, you'll need to update the paths in **/src/app.js** and **/src/scss/style.scss** from **_~mdbootstrap_** to **_~mdbootstrap-pro_**. Remember to uncomment and/or add any of the pro addons that you need.
 
 <br>
+
 ##### Start development server
 ```bash
 npm start
 ```
 Runs the project with webpack-dev-server, opens in a new tab on your default browser. Live-reload enabled.
+
 ##### Building your project
 ```bash
 npm run build
