@@ -18,14 +18,6 @@ This boilerplate is a set of utilities and plugins for NodeJs to tune and stream
     <a href="https://mdbootstrap.com/material-design-for-bootstrap/?utm_ref_id=29943" target="_blank">MDBootstrap Upgrade</a>
 </p>
 
-# Current issues
-
-- Versions above 4.7.7 of MDBootstrap does not work with package compilers such as Webpack because of a change in how they load external packages/plugins. Therefor, this boilerplate is locked in on 4.7.7 right now.
-- Security warning concerning node-sass > node-gyp > tar
-  > Versions of node-tar prior to 4.4.2 are vulnerable to Arbitrary File Overwrite. Extracting tarballs containing a hardlink to a file that already exists in the system, and a file that matches the hardlink will overwrite the system's file with the contents of the extracted file.
-
-You shouldn't worry about ever hitting this vulnerability, however, keep in mind that it exists.
-
 # Installation
 
 First time installation process for both Free and Pro users:
