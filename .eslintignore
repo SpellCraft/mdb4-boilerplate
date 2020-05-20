@@ -1,7 +1,0 @@
-# Ignored folders
-/dist/
-/node_modules/
-/src/lib/
-
-# Ignored files
-webpack.config.js

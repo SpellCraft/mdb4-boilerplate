@@ -1,3 +1,4 @@
+# ---> Node
 # Logs
 logs
 *.log
@@ -17,6 +18,9 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Webpack output folder
+dist
+
 # nyc test coverage
 .nyc_output
 
@@ -31,7 +35,6 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-dist
 
 # Dependency directories
 node_modules/
@@ -75,3 +78,4 @@ typings/
 
 # FuseBox cache
 .fusebox/
+

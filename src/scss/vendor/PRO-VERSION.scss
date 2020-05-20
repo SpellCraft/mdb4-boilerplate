@@ -1,0 +1,32 @@
+// Fontawesome 5
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts' !default;
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+
+// MDBootstrap PRO
+$image-path: '~mdbootstrap-pro/img' !default;
+@import '~mdbootstrap-pro/scss/mdb-pro.scss';
+
+// Import MDBootstrap free addons
+@import '~mdbootstrap-pro/scss/addons/datatables';
+@import '~mdbootstrap-pro/scss/addons/datatables2';
+@import '~mdbootstrap-pro/scss/addons/datatables-select';
+@import '~mdbootstrap-pro/scss/addons/datatables-select2';
+@import '~mdbootstrap-pro/scss/addons/directives';
+@import '~mdbootstrap-pro/scss/addons/flag';
+@import '~mdbootstrap-pro/scss/addons/hierarchical-display';
+@import '~mdbootstrap-pro/scss/addons/rating';
+
+// Import MDBootstrap pro addons
+@import '~mdbootstrap-pro/scss/addons-pro/charts/module';
+@import '~mdbootstrap-pro/scss/addons-pro/cards-extended';
+@import '~mdbootstrap-pro/scss/addons-pro/chat';
+@import '~mdbootstrap-pro/scss/addons-pro/multi-range';
+@import '~mdbootstrap-pro/scss/addons-pro/steppers';
+@import '~mdbootstrap-pro/scss/addons-pro/timeline';
+@import '~mdbootstrap-pro/scss/addons-pro/vector-map';

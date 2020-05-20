@@ -1,0 +1,23 @@
+// Fontawesome 5
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts' !default;
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap.scss';
+
+// MDBootstrap PRO
+$image-path: '~mdbootstrap/img' !default;
+@import '~mdbootstrap/scss/mdb-free.scss';
+
+// Import MDBootstrap free addons
+@import '~mdbootstrap/scss/addons/datatables';
+@import '~mdbootstrap/scss/addons/datatables2';
+@import '~mdbootstrap/scss/addons/datatables-select';
+@import '~mdbootstrap/scss/addons/datatables-select2';
+@import '~mdbootstrap/scss/addons/directives';
+@import '~mdbootstrap/scss/addons/flag';
+@import '~mdbootstrap/scss/addons/hierarchical-display';
+@import '~mdbootstrap/scss/addons/rating';

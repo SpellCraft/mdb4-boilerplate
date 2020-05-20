@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/SpellCraft/mdb-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate) [![star this repo](http://githubbadges.com/star.svg?user=SpellCraft&repo=mdb-boilerplate&style=flat)](https://github.com/SpellCraft/mdb-boilerplate) [![fork this repo](http://githubbadges.com/fork.svg?user=SpellCraft&repo=mdb-boilerplate&style=flat)](https://github.com/SpellCraft/mdb-boilerplate/fork) [![Badge](https://img.shields.io/github/license/SpellCraft/mdb-boilerplate.svg)](https://img.shields.io/github/license/SpellCraft/mdb-boilerplate.svg)
+[![Build Status](https://travis-ci.org/SpellCraft/mdb-boilerplate.svg?branch=master)](https://travis-ci.org/SpellCraft/mdb4-boilerplate) [![star this repo](https://githubbadges.com/star.svg?user=SpellCraft&repo=mdb-boilerplate&style=flat)](https://github.com/SpellCraft/mdb-boilerplate) [![fork this repo](https://githubbadges.com/fork.svg?user=SpellCraft&repo=mdb-boilerplate&style=flat)](https://github.com/SpellCraft/mdb-boilerplate/fork) [![Badge](https://img.shields.io/github/license/SpellCraft/mdb-boilerplate.svg)](https://img.shields.io/github/license/SpellCraft/mdb-boilerplate.svg)
 
 # Overview
 
@@ -53,15 +53,19 @@ npm install
 <br>
 
 ##### Start development server
+
 ```bash
 npm start
 ```
+
 Runs the project with webpack-dev-server, opens in a new tab on your default browser. Live-reload enabled.
 
 ##### Building your project
+
 ```bash
 npm run build
 ```
+
 Builds the project to **/dist/**
 
 # Updating

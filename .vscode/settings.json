@@ -1,21 +1,11 @@
 {
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  "prettier.endOfLine": "lf",
+  "eslint.alwaysShowStatus": true,
   "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "workbench.editor.highlightModifiedTabs": true,
-  "html.format.indentInnerHtml": true,
-  "html.format.wrapLineLength": 180,
-  "html.trace.server": "messages",
-  "editor.rulers": [79, 180],
-  "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#ff4081"
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
   },
-  "bracketPairColorizer.showBracketsInRuler": true,
-  "prettier.printWidth": 200,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.cursorBlinking": true,
-  "jshint.enable": false,
-  "prettier.arrowParens": "always"
+  "prettier.printWidth": 180,
+  "prettier.singleQuote": true
 }
