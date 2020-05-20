@@ -49,15 +49,6 @@ module.exports = (_, argv) => {
         template: path.resolve(__dirname, 'src', 'templates', 'index.html'),
         favicon: path.resolve(__dirname, 'src', 'images', 'favicon.png'),
       }),
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: '**/*',
-            to: 'mdb-addons',
-            context: path.resolve(__dirname, 'node_modules', 'mdbootstrap-pro', 'mdb-addons'),
-          },
-        ],
-      }),
       new MiniCssExtractPlugin({
         filename: '[name].css',
         chunkFilename: '[id].css',
