@@ -17,6 +17,7 @@ import 'mdbootstrap-pro/src/js/pro/mdb-autocomplete';
 import 'mdbootstrap-pro/src/js/pro/preloading';
 import 'mdbootstrap-pro/src/js/pro/range-input';
 import 'mdbootstrap-pro/src/js/pro/sidenav';
+import 'mdbootstrap-pro/src/js/pro/sidenav2';
 import 'mdbootstrap-pro/src/js/pro/smooth-scroll';
 import 'mdbootstrap-pro/src/js/pro/sticky';
 import 'mdbootstrap-pro/src/js/vendor/addons-pro/chat';
@@ -45,8 +46,8 @@ import 'mdbootstrap-pro/src/js/vendor/pro/lightbox';
 import 'mdbootstrap-pro/src/js/vendor/pro/ofi';
 import 'mdbootstrap-pro/src/js/vendor/pro/scrollbar';
 import 'mdbootstrap-pro/src/js/vendor/pro/scrolling-navbar';
-import 'mdbootstrap-pro/src/js/vendor/pro/toastr';
 import 'mdbootstrap-pro/src/js/vendor/pro/vector-map';
 import 'mdbootstrap-pro/src/js/vendor/pro/vector-map-world-mill';
 
 global.bsCustomFileInput = require('mdbootstrap-pro/src/js/vendor/free/bs-custom-file-input');
+window.toastr = require('mdbootstrap-pro/src/js/vendor/pro/toastr');
