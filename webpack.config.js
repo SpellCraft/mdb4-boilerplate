@@ -94,5 +94,10 @@ module.exports = (_, argv) => {
         },
       ],
     },
+    resolve: {
+      alias: {
+        picker: 'mdbootstrap-pro/src/js/pro/picker',
+      },
+    },
   };
 };
